@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastvla"
+version = "0.1.0"
+description = "Inference optimization of the SmolVLA robot policy on LIBERO"
+requires-python = ">=3.10"
+# torch and lerobot are installed separately (see M0 setup), because the
+# RTX 5070 needs a cu128 PyTorch build.
+dependencies = ["numpy", "pandas", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
